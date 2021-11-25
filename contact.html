@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Portfolio
+        </title>
+
+
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+
+        <body style="background: url(data:image/jpeg;base64,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); 
+        background-size: 100% 100%;">
+
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">My portfolio</a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="experience.html">Experience</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5">Please feel free to contact me if you have any questions or concerns. </h1>
+                    <hr class="hr-light">
+                    <h6 class="mb-4">There is no self-advertising or clamoring for attention here, just a friendly offer to start collaborating and achieve something great together.
+                    </h6>
+                    <a class="btn btn-white">Support me</a>
+                    <a class="btn btn-outline-white">Like me </a>
+                  </div>
+                  <!--Grid column-->
+                  <!--Grid column-->
+                  <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                    <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+        <!--Main Layout-->
+        <main>
+          <div class="container">
+            <!--Grid row-->
+            <div class="row py-5">
+              <!--Grid column-->
+              <div class="col-md-12 text-center">
+                <p>It seems that we have so much time, but then we're getting old so fast and life seems so short. Some day, you will regret that you didn't keep in touch with someone you love, but it's impossible to bring the time back. Therefore, whatever happens in your life, no matter how busy you are, if you really care about someone, text, call or meet them. Keeping in touch is not only about going out together and having fun, but what makes us feel significant. Keep in touch quotes below will remind and inspire you to contact with your beloved ones! .</p>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+        </main>
+        <!--Main Layout-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+          <div class="container">
+              <h1 classs="display-8">Contact Me</h1>
+
+              <div class="row">
+                  <div class="col-6">
+                      <table class="table">
+                          <tr>
+                              <th>Phone</th>
+                              <td>+880 1623695132</td>
+                          </tr>
+
+
+                          <tr>
+                            <th>Email</th>
+                            <td>
+                                <a href="mailto:rifatmustari@gmail com">rifatmustari@gmail com</a>
+
+                                </td>
+                        </tr>
+
+                        <tr>
+                            <th>Address</th>
+                            <td>Mirpur 1 footbridge, Dhaka 1200</td>
+                        </tr>
+
+                        <tr>
+                            <th>facebook</th>
+                            <td>Rifat Mustari</td>
+                        </tr>
+
+                        <tr>
+                            <th>Istagram</th>
+                            <td>@rifat_Mustari</td>
+                        </tr>
+
+
+
+
+
+                      </table>
+                  </div>
+                  <div class="col-6"></div>
+              </div>
+              <div class="col-6">
+                  <h4> Send me a message or text me</h4>
+                  <form action="">
+                  <input placeholder="Full name" class="form-control">
+                  <input style="margin-top:20px" placeholder="Email" class="form-control">
+                  
+                  <label style="margin-top:20px">  Message</label>
+                  <textarea class="form-control"></textarea>
+                 <button style="margin-top:20px" class="btn btn-primary">Send Message</button>
+               </form> 
+              </div>
+          </div>
+              
+    </div>
+               
+    <div class="jumbotron text-center" style="margin-bottom:-10">
+        <p>Thank you Everyone for visiting my website </p>
+      </div>
+
+
+     
+
+    </body>
+</html>

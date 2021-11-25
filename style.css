@@ -1,0 +1,230 @@
+ <?php
+
+$CityName = "Dhaka";
+
+$url = "https://api.openweathermap.org/data/2.5/forecast?q=dhaka&units=metric&appid=7fec0dfc18a35a673a4cbb6429e04363";
+
+if(isset($_GET['submit'])) {
+	$CityName = $_GET['CityName'];
+
+	$url = "https://api.openweathermap.org/data/2.5/forecast?q=".$CityName."&units=metric&appid=7fec0dfc18a35a673a4cbb6429e04363";
+}
+
+$contents = file_get_contents($url);
+$clima = json_decode($contents);
+
+for ($i = 0; $i <= 39; $i++) {
+	//$dt_txt = $clima->list[$i]->dt_txt;
+	//$wind_speed = $clima->list[$i]->wind->speed;
+	//$clouds = $clima->list[$i]->clouds->all;
+  	//$temp_max = $clima->list[$i]->main->temp_max;
+    //$weather = $clima->list[$i]->weather[0]->id;
+  	//echo "Wind Speed: " . $wind_speed . "<br>";
+  	//echo "Clouds: " . $clouds . "<br>";	
+    //echo "Date: " . $dt_txt . "<br>";	
+  	//echo "Temp Max:" . $temp_max . "<br>";
+  	//echo "weather: " . $weather . "<br>";
+
+  	//echo "<br>";
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Weather Today</title>
+
+     
+       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/
+       weather-icons/2.0.9/css/weather-icons.min.css">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css/family=signika">
+       <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body>
+
+  <form action="assignment5.php" method="get">
+       <input type="text" name="CityName">
+       <input type="submit" value="Submit" name="submit">
+    </form>
+
+  <video autoplay muted loop>
+    <source src="rain.mp4" type="video/mp4">
+    </video> 
+   <div class="box">
+    <div class="today">Today</div>
+    <div class="time"><?php
+        date_default_timezone_set('Asia/dhaka');
+        $time = date("h:i A");
+        echo $time . "<br>";
+      ?></div>
+    <div class="date"><?php $today = date("d M Y");echo $today . "<br>"; ?></div>
+    <ul class="gambar-slider">
+      <li>
+        <i id="size" class="fa-5x wi wi-day-thunderstorm"></i>
+        <div class="city">
+          <?php 
+            echo $CityName;
+          ?>  
+        </div>
+        <div class="Day">
+          <?php 
+            $date_unix = $clima->list[0]->dt;
+            echo(date("d D",$date_unix));
+          ?>  
+          </div>
+        <div class="celcius" id="size-cel">
+          <?php 
+            $temp = $clima->list[0]->main->temp;
+            echo intval($temp)."&deg;C";
+            //echo intval($temp)."&deg;C";
+          ?>
+          <i class="wi wi-degrees"></i></div>
+        <div class="weather">
+          <?php 
+            $description = $clima->list[0]->weather[0]->description;
+            echo $description."<br>";
+          ?>  
+          </div>
+      </li>
+      
+
+      <li>
+        <i id="size" class="fa-5x wi wi-day-thunderstorm"></i>
+        <div class="city">
+          <?php 
+            echo $CityName;
+          ?>  
+        </div>
+        <div class="Day">
+          <?php 
+            $date_unix = $clima->list[8]->dt;
+            echo(date("d D",$date_unix));
+          ?>  
+          </div>
+        <div class="celcius" id="size-cel">
+          <?php 
+            $temp = $clima->list[8]->main->temp;
+            echo intval($temp)."&deg;C";
+            //echo intval($temp)."&deg;C";
+          ?>
+          <i class="wi wi-degrees"></i></div>
+        <div class="weather">
+          <?php 
+            $description = $clima->list[8]->weather[0]->description;
+            echo $description."<br>";
+          ?>  
+          </div>
+      </li>
+      
+
+
+      <li>
+        <i id="size" class="fa-5x wi wi-day-thunderstorm"></i>
+        <div class="city">
+          <?php 
+            echo $CityName;
+          ?>  
+        </div>
+        <div class="Day">
+          <?php 
+            $date_unix = $clima->list[16]->dt;
+            echo(date("d D",$date_unix));
+          ?>  
+          </div>
+        <div class="celcius" id="size-cel">
+          <?php 
+            $temp = $clima->list[16]->main->temp;
+            echo intval($temp)."&deg;C";
+            //echo intval($temp)."&deg;C";
+          ?>
+          <i class="wi wi-degrees"></i></div>
+        <div class="weather">
+          <?php 
+            $description = $clima->list[16]->weather[0]->description;
+            echo $description."<br>";
+          ?>  
+          </div>
+      </li>
+
+      <li>
+        <i id="size" class="fa-5x wi wi-day-thunderstorm"></i>
+        <div class="city">
+          <?php 
+            echo $CityName;
+          ?>  
+        </div>
+        <div class="Day">
+          <?php 
+            $date_unix = $clima->list[8]->dt;
+            echo(date("d D",$date_unix));
+          ?>  
+          </div>
+        <div class="celcius" id="size-cel">
+          <?php 
+            $temp = $clima->list[8]->main->temp;
+            echo intval($temp)."&deg;C";
+            //echo intval($temp)."&deg;C";
+          ?>
+          <i class="wi wi-degrees"></i></div>
+        <div class="weather">
+          <?php 
+            $description = $clima->list[8]->weather[0]->description;
+            echo $description."<br>";
+          ?>  
+          </div>
+      </li>
+
+      <li>
+        <i id="size" class="fa-5x wi wi-day-thunderstorm"></i>
+        <div class="city">
+          <?php 
+            echo $CityName;
+          ?>  
+        </div>
+        <div class="Day">
+          <?php 
+            $date_unix = $clima->list[20]->dt;
+            echo(date("d D",$date_unix));
+          ?>  
+          </div>
+        <div class="celcius" id="size-cel">
+          <?php 
+            $temp = $clima->list[20]->main->temp;
+            echo intval($temp)."&deg;C";
+            //echo intval($temp)."&deg;C";
+          ?>
+          <i class="wi wi-degrees"></i></div>
+        <div class="weather">
+          <?php 
+            $description = $clima->list[20]->weather[0]->description;
+            echo $description."<br>";
+          ?>  
+          </div>
+      </li>
+      
+
+      
+
+
+    </ul>
+   </div>
+         <script src="jquery-2.1.1.min.js"></script>
+         <script src="jquery.bxslider.min.js"></script>
+         <script>
+           $('.gambar-slider').bxslider({
+            mode:'horizontal',
+            slideMargin:0,
+            auto:true,
+            pager:false
+           
+            });
+         </script>
+
+
+   </div>
+
+      </body>
+
+    </html>      

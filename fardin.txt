@@ -1,0 +1,89 @@
+public class Book
+{
+    /* at the very beginning we need to create instance variables **/
+
+    public String title;
+    
+    public String author;
+    
+    public int idTextfield;
+    
+    public String dateoflending;
+    
+    public int no of days; 
+
+  
+    
+    public Book(String title,String author,int idTextfield,String dateoflending,doubleno of days)
+    {   this.title=title;
+        this.author=author;
+        this.idTextfield=idTextfield;
+        this.dateoflending=dateoflending;
+        this.no_of_days=no_of _days;
+    }
+    
+   
+      
+    public String getTitle()
+    {
+        return title;
+    }
+    
+     public String getAuthor()
+    {
+        return author;
+    }
+    public int getidTextfield()
+    {
+        return idTextfield;
+    }
+    public String getdateoflending()
+    {
+        return dateoflending;
+    } 
+    public double getCost()
+    {
+        returnno of days;
+    }
+    
+
+   
+    public void setTitle(String title)
+    {
+        this.title=title;
+    }
+    
+     public void setAuthor(String author)
+    {
+       this.author=author;
+    }
+    public void setidTextfield(int idTextfield)
+    {
+        this.idTextfield=idTextfield;
+    }
+    public void setdateoflending(String dateoflending)
+    {
+        this.dateoflending=dateoflending;
+    } 
+    public void setCost(doubleno of days)
+    {
+        this.cost=cost;
+    }    
+    
+    
+    
+    
+    public String toString()
+    {
+        return "The details of the book are: " + title + ", " + author + ", " + idTextfield + ", " + dateoflending + ", " +no of days;
+    }
+
+        System.out.println("----------lendingconfirmation.txt------"));
+			System.out.println("studentid" + results.getString("Title"));
+			System.out.println("Book Author: " + results.getString("Author"));
+			System.out.println("dateOflending: " + results.getString("dateOflending") + " " + results.getInt("YearOfPublishing"));
+			System.out.println("no_of_days       " + results.getInt("no_of_days"));
+			System.out.println();
+    
+    
+}

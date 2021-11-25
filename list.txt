@@ -1,0 +1,598 @@
+
+<!----This file contains all files of html, css, stylesheet, javascript, bootstrap------>
+
+<!DOCTYPE html>
+
+
+<body>
+
+
+  <body style="background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRMMZF32L3uC7QrOV3pCPS5qgCwOLSN8ppGaw&usqp=CAU); 
+        background-size: 100% 100%;">
+
+
+
+
+ <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>Rifat Mustari Activity </h1>
+  <p>The page is designed for the task which I need to do in my life .</p>
+  <p>Sometimes our stop-doing list needs to be bigger than our to-do list</p>
+</div>
+
+
+
+
+</body>
+</html>
+ 
+
+
+
+
+
+
+
+
+<!--------------To do list --------------------->
+
+
+
+<html>
+<head>
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: yellowgreen;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: lightsteelblue;
+  padding: 30px 40px;
+  color:darkgreen;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: pink;
+  color: white;
+  text-align: center;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My Regular To Do List</h2>
+  <input type="text" id="myInput" placeholder="Add my new daily task...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>I am Rifat Mustari Rimu</li>
+  <li class="checked">pay my all bills</li>
+  <li>Meet samantha ( my best friend)</li>
+  <li>Buy flower</li>
+  <li>Read a book</li>
+  <li>Decorate my home</li>
+  <li>Organize office</li>
+</ul>
+
+
+
+
+<script>
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+
+<!---------------------About us page----------------->
+      
+
+<style>
+
+.navbar{
+    background-color: rgb(154, 209, 168);
+  padding: 30px 40px;
+  color:darkgreen;
+  text-align: center;
+}
+
+</style>
+
+
+
+<div class="navbar">
+<div class="text-dark-400" style="margin-bottom:100">
+        <p> Here, you can add your new task and kept the record and the status of the data  </p>
+      </div>
+               
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+<!-----------FOR DATA STORE AND RETRIVE THE SAME DATA FROM THE DATABASE---------->
+
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+  
+  
+  
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(120deg,#487eb0,#fbc531);
+  min-height: 100vh;
+}
+
+
+.container{
+  font-family: fantasy;
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+.txtb{
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000;
+  background: none;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+h3{
+  margin: 10px 0;
+}
+
+.task{
+  width: 100%;
+  background: rgba(255,255,255,0.5);
+  padding: 18px;
+  margin: 6px 0;
+  overflow: hidden;
+}
+
+.task i{
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.comp .task{
+  background: rgba(0,0,0,.5);
+  color: #fff;
+}
+  
+
+  
+  </style>
+  
+  
+
+  
+
+  </head>
+  
+  <body>
+
+    <div class="w3-bar container">
+        <div class="w3-bar w3-border w3-light-grey">
+      <input type="text" class="txtb" placeholder="Add a New task, press enter......">
+      <div class="notcomp">
+  
+     
+
+        <h3>Tasks which is not completed</h3>
+
+
+
+      </div>
+
+      <div class="comp">
+        <h3>Tasks is done. </h3>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      $(".txtb").on("keyup",function(e){
+        //13  means enter button
+        if(e.keyCode == 13 && $(".txtb").val() != "")
+        {
+          var task = $("<div class='task'></div>").text($(".txtb").val());
+          var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+            var p = $(this).parent();
+            p.fadeOut(function(){
+              p.remove();
+            });
+          });
+
+          var check = $("<i class='fas fa-check'></i>").click(function(){
+            var p = $(this).parent();
+            p.fadeOut(function(){
+              $(".comp").append(p);
+              p.fadeIn();
+            });
+            $(this).remove();
+          });
+
+          task.append(del,check);
+          $(".notcomp").append(task);
+            //to clear the input
+          $(".txtb").val("");
+        }
+      });
+    </script>
+
+
+
+
+
+<style>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+<!---footer----->
+
+<style>
+.footer{
+    background-color: rgb(255, 207, 134);
+  padding: 10px 20px;
+ 
+  color:rgb(34, 25, 7);
+  text-align: center;
+}
+
+
+</style>
+<div class="footer">
+  <div id="button"></div>
+<div id="container">
+<div id="cont">
+<div class="footer_center">
+	   <h3> Thanks for visiting the website</h3>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!------>
+
+
+
+</body>
+</html>
+ 
+
+
+
+
+
+<!------------------------------------->
+
+
+
+
+
+
+
+
+
+
